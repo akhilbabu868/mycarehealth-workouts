@@ -4,6 +4,8 @@ D:\user-mgt\src\main\java\com\matchmaker\user_mgt\config\SecurityConfig.java
 D:\user-mgt\src\main\java\com\matchmaker\user_mgt\config\SwaggerConfig.java
 D:\user-mgt\src\main\java\com\matchmaker\user_mgt\controller\AuthController.java
 D:\user-mgt\src\main\java\com\matchmaker\user_mgt\controller\UserController.java
+D:\user-mgt\src\main\java\com\matchmaker\user_mgt\exception\GlobalExceptionHandler.java
+D:\user-mgt\src\main\java\com\matchmaker\user_mgt\exception\ResourceNotFoundException.java
 D:\user-mgt\src\main\java\com\matchmaker\user_mgt\model\dto\AuthenticationRequest.java
 D:\user-mgt\src\main\java\com\matchmaker\user_mgt\model\dto\AuthenticationResponse.java
 D:\user-mgt\src\main\java\com\matchmaker\user_mgt\model\dto\UserRequest.java

@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  userservice:
+    image: "akhil868/userservice:s1"
+    container_name: userservice-ms
+    ports:
+      - "8080:8081"
+  mysql:
+    image: mysql:8
+    container_name: mysql-container
+    environment:
+      MYSQL_ROOT_PASSWORD: MYSQL_ROOT_PASSWORD  # Root password for MySQL
+      MYSQL_DATABASE: truematchdb               # Default database name
+      MYSQL_USER: MYSQL_ROOT_USER                 # User for accessing the database
+      MYSQL_PASSWORD: MYSQL_ALLOW_EMPTY_PASSWORD         # Password for that user
+    ports:
+      - "3309:3309"                      # Expose MySQL port for local access
+    volumes:
+      - mysql-data:/var/lib/mysql       # Persist data across container restarts
+
+  app:
+    build: .
+    container_name: user-api-app
+    environment:
+      MYSQL_HOST: mysql                # MySQL service name in Docker Compose
+      MYSQL_PORT: 3306                 # MySQL default port
+      MYSQL_USER: MYSQL_ROOT_USER                   # The user you created in MySQL
+      MYSQL_PASSWORD: MYSQL_ALLOW_EMPTY_PASSWORD       # The password for that user
+      MYSQL_DATABASE: truematchdb             # The database your app uses
+    depends_on:
+      - mysql                          # Ensure MySQL starts before the app
+    ports:
+      - "8082:8082"                    # Expose the app port if needed
+
+volumes:
+  mysql-data:                         # Docker volume to persist MySQL data

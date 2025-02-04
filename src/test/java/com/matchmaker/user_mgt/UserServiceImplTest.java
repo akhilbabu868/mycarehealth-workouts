@@ -20,7 +20,6 @@ import java.util.Optional;
 import static org.junit.Assert.*;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.*;
-
 public class UserServiceImplTest {
 
     @Mock

@@ -1,0 +1,6 @@
+com\matchmaker\user_mgt\UserMgtApplicationTests.class
+stepDefinitions\loginStepsDefinition.class
+stepDefinitions\TestRunner.class
+com\matchmaker\user_mgt\UserServiceImplTest.class
+stepDefinitions\userRegistrationStepDefinition.class
+com\matchmaker\user_mgt\AuthenticationServiceImplTest.class
